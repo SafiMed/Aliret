@@ -1,0 +1,22 @@
+h1 { 
+	color: grey;
+	font-family: 'Righteous', cursive; 
+	font-size: 65px; 
+	font-weight: normal; 
+	line-height: 60px; 
+	margin: 10px 0 20px; 
+	text-transform: uppercase; 
+	text-shadow: 2px 2px 0 #000, 
+	margin: 10px 0 24px; 
+	text-align: center;
+	margin: 40px;
+}
+
+h3 { 
+	color: #7c795d; 
+	font-family: 'Trocchi', serif; 
+	font-size: 45px; 
+	font-weight: normal;
+ 	line-height: 48px; 
+ 	margin: 0;
+}

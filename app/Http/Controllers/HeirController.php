@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Heir;
 
-class HomeController extends Controller
+class HeirController extends Controller
 {
-    /**
+	    /**
      * Create a new controller instance.
      *
      * @return void
@@ -15,14 +16,15 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+	/**
+	 * Display a listing of the resource.
+	 * 
+	 * @return Illuminate\Http\Response
+	 */
     public function index()
     {
-        return view('home');
+    	$heirs = Heir::all();
+    	return view('heirs.index')->with('heirs', $heirs);
     }
 }

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link href="{{ asset('assets/css/justified-nav.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/forms.css') }}" rel="stylesheet">
   </head>
 
   <body>
@@ -26,27 +27,16 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
               @else
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="inheritance-calculator">Calculator<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Projects</a>
+                  <a class="nav-link" href="verses">Verses of inheritance</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
+                  <a class="nav-link" href="forum" target="_blank">Forum</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Downloads</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                  <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">-->
-                    {{ Auth::user()->name }} <span class="caret"></span>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a href="{{ route('logout') }}"
+                    <a class="nav-link" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                   document.getElementById('logout-form').submit();">
                                     Logout
@@ -55,7 +45,6 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
-                  </div>
                 </li>
               @endguest
             </ul>
@@ -67,7 +56,7 @@
 
       <!-- Site footer -->
       <footer class="footer">
-        <p>&copy; Company 2017</p>
+        <p>&copy; Aliret 2017</p>
       </footer>
     </div>
 

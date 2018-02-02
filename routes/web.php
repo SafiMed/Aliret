@@ -17,4 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/verses', function(){
+	return view('nav-item.verses');
+});
+Route::get('/inheritance-calculator', 'HeirController@index');
+Route::get('/forum', function(){
+	return redirect('http://127.0.0.1:8800/inheritance-calculator');
+});
